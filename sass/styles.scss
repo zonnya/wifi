@@ -10,6 +10,7 @@ $active_color: #79e8e7;
 
 $desktop-big: 1600px - 1px;
 $desktop: 1440px - 1px;
+$tablet: 1024px - 1px;
 $mobile: 640px - 1px;
 
 *, *:before, *:after{
@@ -753,8 +754,224 @@ body{
 	}
 }
 
+
+.roadmap{
+	position: relative;
+	max-width: 960px;
+	height: 610px;
+	width: 100%;
+	margin: 0 auto;
+	background: url($base_img + 'roadmap.png') left bottom no-repeat;
+	background-size: 681px 513px;
+	margin-top: 60px;
+
+	@media(max-width: $tablet){
+		background: none;
+		height: auto;
+	}
+
+	&__item{
+		position: absolute;
+		max-width: 280px;
+		width: 100%;
+		text-align: left;
+
+		&--1{
+			top: 0;
+			left: 20px;
+		}
+		&--2{
+			top: 0;
+			left: 400px;
+		}
+		&--3{
+			top: 220px;
+			left: 190px;
+		}
+		&--4{
+			top: 220px;
+			left: 680px;
+		}
+		&--5{
+			top: 400px;
+			left: 205px;
+		}
+		&--6{
+			top: 400px;
+			left: 680px;
+		}
+
+		@media(max-width: $tablet){
+			position: static;
+			margin-bottom: 40px;
+			max-width: none;
+		}
+	}
+
+	&__title{
+		color: $active_color;
+		@extend .title_ff;
+		font-size: 24px;
+		line-height: 25px;
+		margin-bottom: 5px;
+	}
+
+	&__text{
+		p{
+			margin: 0;
+			padding: 0;
+		}
+	}
+}
+
+.token{
+	@extend .title_ff;
+	text-align: left;
+
+	&__item{
+		padding: 45px 60px;
+		border: solid 1px #3a5375;
+
+		@media(max-width: $tablet){
+			padding: 0;
+			border: 0;
+		}
+	}
+
+	&__title{
+		font-size: 24px;
+		line-height: 28px;
+		margin-bottom: 40px;
+		margin-left: 50px;
+		font-weight: normal;
+		color: $active_color;
+
+
+		@media(max-width: $tablet){
+			margin-left: 0;
+		}
+	}
+
+	&__col_wrap{
+		&:after{
+			content:" ";
+			display:block;
+			height: 0;
+			clear: both;
+		}
+	}
+
+	&__chart{
+		width: 390px;
+		float: left;
+
+		img{
+			display: none;
+			max-width: 100%;
+			max-height: 280px;
+			height: auto;
+			width: auto;
+			margin: 0 auto;
+		}
+
+		@media(max-width: $tablet){
+			width: 100%;
+
+			img{
+				display: block;
+			}
+		}
+	}
+
+	&__slider{
+		position: relative;
+		z-index: 1;
+	}
+
+	&__slider_wrap{
+		max-width: 1220px;
+		padding: 0 40px;
+		margin: 0 auto;
+		position: relative;
+		margin-top: 30px;
+
+		@media(max-width: $tablet){
+			padding: 0 20px;
+		}
+	}
+
+	&__chart_item{
+		height: 390px;
+		width: 390px;
+
+		@media(max-width: $tablet){
+			display: none;
+		}
+	}
+
+	&__text{
+		float: left;
+		padding-left: 430px;
+		margin-left: -390px;
+		width: 100%;
+
+		@media(max-width: $tablet){
+			padding-left: 0;
+			margin-left: 0;
+			margin-top: 20px;
+		}
+	}
+
+	&__like_title{
+		color: $active_color;
+		margin-bottom: 25px;
+		font-weight: normal;
+	}
+
+	&__text_block{
+		margin-bottom: 20px;
+		p{
+			margin: 0;
+			padding: 0;
+		}
+
+		.hover{
+			color: #44bfff;
+		}
+	}
+
+	&__nav{
+		.slick-arrow{
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			width: 60px;
+			z-index: 2;
+			height: 100%;
+			cursor: pointer;
+			background: url($base_img + 'arrow.png') center center no-repeat;
+
+			@media(max-width: $tablet){
+				width: 40px;
+				// height: 240px;
+			}
+
+
+			&.slick-prev{
+				left: -20px;
+			}
+
+			&.slick-next{
+				right: -20px;
+				transform: rotate(180deg);
+			}
+		}
+	}
+}
+
 // slick
 	.slick-slider {
+		overflow: hidden;
 		* {
 			outline: none;
 			box-sizing: border-box;
@@ -776,6 +993,7 @@ body{
 		.slick-list{
 			padding: 0 !important;
 			margin: 0 !important;
+			overflow: hidden;
 		}
 	}
 // end slick
