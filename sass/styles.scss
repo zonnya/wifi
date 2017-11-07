@@ -82,6 +82,7 @@ body{
 .content__block{
 	max-width: 1685px;
 	padding: 0 20px;
+	padding-bottom: 40px;
 
 	&:after{
 		content:" ";
@@ -997,3 +998,284 @@ body{
 		}
 	}
 // end slick
+
+
+//modal
+.modal{
+  	display: none;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	position: fixed;
+  	z-index: 101;
+  	opacity: 0;
+  	transition: all 0.5s ease-out 0.1s;
+
+  &.in{
+  	opacity: 1;
+  }
+
+  .modal_close{
+    position: absolute;
+    z-index: 101;
+    top: 10px;
+    right: 10px;
+    font-size: 20px !important;
+
+    &:hover{
+    }
+  }
+
+  &__text{
+  	color: #303030;
+	margin-bottom: 20px;
+	text-align: center;
+
+  	a, a:link, a:hover, a:visited, a:active, a:focus{
+  		color: #2d72d0;
+  		text-decoration: underline;
+  	}
+
+  	a:hover{
+  		text-decoration: none;
+  	}
+  }
+
+  &__form_line{
+	margin-bottom: 15px;
+	text-align: center;
+
+	&:after{
+		content:" ";
+		display:block;
+		height: 0;
+		clear: both;
+	}
+
+	&:last-of-type{
+		margin-bottom: 0;
+	}
+
+	&--col_wrap{
+		margin: 0 -15px; 
+		margin-bottom: 15px;
+	}
+  }
+
+  &__col{
+  	width: 50%;
+  	float: left;
+  	padding: 0 15px;
+
+  	@media(max-width: $mobile){
+  		width: 100%;
+		margin-bottom: 15px;
+  	}
+  }
+
+  &__input{
+	padding: 9px 15px;
+	line-height: 20px;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 18px;
+	display: block;
+	width: 100%;
+	max-width: 285px;
+	border: solid 1px #e8e8e8;
+	outline: none;
+
+
+	&:hover, &:focus{
+		border-color: #3178d8;
+	}
+  }
+
+  &__check{
+  	position: relative;
+  	width: 49%;
+  	display: inline-block;
+
+
+		@media(max-width: $mobile){
+			width: 100%;
+		}
+
+  	input{
+  		opacity: 0;
+  		position: absolute;
+  		top: 0;
+  		left: 0;
+  		right: 0;
+  		bottom: 0;
+  		display: block;
+		margin: 0;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+
+  		&:checked + label{
+  			i{
+
+				&.fa-check-square-o{
+					display: inline-block;
+				}
+
+				&.fa-square-o{
+					display: none;
+				}
+			}
+  		}
+  	}
+
+  	label{
+  		font-size: 16px;
+  		color: #303030;
+  		line-height: 20px;
+		
+		i{
+			margin-right: 5px;
+			width: 15px;
+			text-align: left;
+
+			&.fa-square-o{
+				display: inline-block;
+			}
+
+			&.fa-check-square-o{
+				display: none;
+			}
+		}
+  	}
+  }
+
+  .modal-dialog{
+    position: absolute;
+    background: #ffffff;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 440px;
+    width: 100%;
+    // height: 380px;
+    padding: 0;
+    // @include border-radius($big_bdrs);
+    border: solid 1px #3178d8;
+    height: 315px;
+    max-height: 100%;
+
+
+	@media(max-width: $mobile){
+		width: 320px;
+		max-width: 320px !important;
+		height: 360px;
+	}
+
+    @media (max-height:375px){
+    	overflow: scroll;
+    }
+  }
+
+  a, a:link, a:hover, a:visited, a:active, a:focus, button{
+    &.modal_close{
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      height: 20px;
+      width: 20px;
+      opacity: 0.6;
+      display: block;
+    }
+    &.modal__button{
+    	font-size: 18px;
+    	text-transform: uppercase;
+    	color: #ffffff;
+    	text-align: center;
+    	width: 100%;
+		max-width: 285px;
+		margin: 0 auto;
+		border: 0;
+		padding: 10px;
+		line-height: 20px;
+		outline: none;
+		text-decoration: none;
+		background: #2d72d0;
+		cursor: pointer;
+    }
+
+    &.modal__foggot{
+		font-size: 16px;
+		line-height: 20px;
+		color: #303030;
+		text-decoration: underline;
+		display: inline-block;
+		width: 49%;
+
+
+		@media(max-width: $mobile){
+			width: 100%;
+		}
+    }
+  }
+
+  a:hover{
+  	&.modal_close{
+  		opacity: 1;
+  	}
+    &.modal__foggot{
+    	text-decoration: none;
+    }
+  }
+  
+  &.in{
+    display: block;
+  }
+  .modal-content{
+    border: 0;
+    padding: 30px;
+      &:after{
+        content:" ";
+        display: block;
+        height: 0;
+        clear: both;
+      }
+  }
+
+  .modal-body, .modal-header{
+    padding: 0;
+    border: 0;
+  }
+
+}
+
+#sing_up .modal-dialog{
+	height: 230px;
+	max-width: 540px;
+	
+	@media(max-width: $mobile){
+		height: 375px;
+	}
+
+	.modal-content{
+		padding: 40px 30px;
+	}
+}
+
+.modal-backdrop{
+	background: rgba(7,7,7, 0.9);
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: 100;
+	opacity: 0;
+	transition: all 0.5s ease-out 0.1s;
+	&.fade.in{
+		opacity: 1;
+	}
+}
+// end modal

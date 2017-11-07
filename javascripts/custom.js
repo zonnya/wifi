@@ -58,127 +58,53 @@ $(document).ready(function () {
       //   chart.draw(data, options);
       // }
 
-    $('#token__chart_1').highcharts({
-        chart: {
-            renderTo: 'container',
-            type: 'pie',
-            spacing:[0, 0, 0, 0 ],
-            backgroundColor: 'transparent',
-            plotBackgroundColor: null,
-            plotBorderWidth: 0,
-            plotShadow: false
+    if($('#token__chart_1').length){
+        $('#token__chart_1').highcharts({
+            chart: {
+                renderTo: 'container',
+                type: 'pie',
+                spacing:[0, 0, 0, 0 ],
+                backgroundColor: 'transparent',
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false
 
-        },
+            },
 
-        colors: ['transparent'],
-        credits: {
-            enabled: false
-        },
+            colors: ['transparent'],
+            credits: {
+                enabled: false
+            },
 
-        title: {
-            text: ''
-        },
-              
-        tooltip: {
-            enabled: false,
-            formatter: function () {
-                return '<b>' + this.point.name + '</b>';
-            }
-        },
-
-        series: [{
-            data: [
-                {x:'заморожено на 1 год',  y:39, id:"token__chart_1_pie_3"},
-                {x:'ICO tokensale', y:33, id:"token__chart_1_pie_1"},
-                {x:'pre-ICO tokensale',  y:10, id:"token__chart_1_pie_2"},
-                {x:'founders',  y:7, id:"token__chart_1_pie_6"},
-                {x:'bounty program',  y:3, id:"token__chart_1_pie_4"},
-                {x:'advisers',  y:3, id:"token__chart_1_pie_5"},
-                {x:'team',  y:5, id:"token__chart_1_pie_7"},
-            ],
-            innerSize: '40%',
-            states: {
-                hover: {
-                  color: '#3178d8'
+            title: {
+                text: ''
+            },
+                  
+            tooltip: {
+                enabled: false,
+                formatter: function () {
+                    return '<b>' + this.point.name + '</b>';
                 }
             },
-            point:{
-              events: {
-                mouseOver: function (event) {
-                  var chart_item = this.id;
-                  $('.token__text_block [for="' + chart_item + '"]').addClass('hover');
-                },
 
-                mouseOut: function (event) {
-                    var chart_item = this.id;
-                    $('.token__text_block [for="' + chart_item + '"]').removeClass('hover');
-                }
-              }
-            }
-        }],
-        plotOptions: {
-            pie: {
-                dataLabels: {
-                    distance: -30,                    
-                    enabled: true,
-                    format: '{y}%',
-                    connectorPadding: 0,
-                    y: -6,
-                    style: {
-                      color: "#ffffff",
-                      textOutline: '0',
-                      fontWeight: "light",
-                      fontSize: "16px"
+            series: [{
+                data: [
+                    {x:'заморожено на 1 год',  y:39, id:"token__chart_1_pie_3"},
+                    {x:'ICO tokensale', y:33, id:"token__chart_1_pie_1"},
+                    {x:'pre-ICO tokensale',  y:10, id:"token__chart_1_pie_2"},
+                    {x:'founders',  y:7, id:"token__chart_1_pie_6"},
+                    {x:'bounty program',  y:3, id:"token__chart_1_pie_4"},
+                    {x:'advisers',  y:3, id:"token__chart_1_pie_5"},
+                    {x:'team',  y:5, id:"token__chart_1_pie_7"},
+                ],
+                innerSize: '40%',
+                states: {
+                    hover: {
+                      color: '#3178d8'
                     }
                 },
-           
-            },            
-        }
-    });
-
-    $('#token__chart_2').highcharts({
-        chart: {
-            renderTo: 'container',
-            type: 'pie',
-            spacing:[0, 0, 0, 0 ],
-            backgroundColor: 'transparent',
-            plotBackgroundColor: null,
-            plotBorderWidth: 0,
-            plotShadow: false
-
-        },
-
-        colors: ['transparent'],
-        credits: {
-            enabled: false
-        },
-
-        title: {
-            text: ''
-        },
-              
-        tooltip: {
-            enabled: false,
-            formatter: function () {
-                return '<b>' + this.point.name + '</b>';
-            }
-        },
-
-        series: [{
-            data: [
-                {x:'Разработка программного обеспечения',  y:10, id:"token__chart_2_pie_2"},
-                {x:'Привлечение рекламодателей',  y:15, id:"token__chart_3_pie_3"},
-                {x:'Непредвиденные расходы',  y:5, id:"token__chart_4_pie_4"},
-                {x:'>Правовая поддержка и администрирование.',  y:10, id:"token__chart_5_pie_5"},
-                {x:'Развитие и продвижение компании', y:60, id:"token__chart_2_pie_1"}
-            ],
-            states: {
-                hover: {
-                  color: '#0cc5a9'
-                }
-            },
-            point:{
-                events: {
+                point:{
+                  events: {
                     mouseOver: function (event) {
                       var chart_item = this.id;
                       $('.token__text_block [for="' + chart_item + '"]').addClass('hover');
@@ -188,28 +114,106 @@ $(document).ready(function () {
                         var chart_item = this.id;
                         $('.token__text_block [for="' + chart_item + '"]').removeClass('hover');
                     }
+                  }
                 }
+            }],
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        distance: -30,                    
+                        enabled: true,
+                        format: '{y}%',
+                        connectorPadding: 0,
+                        y: -6,
+                        style: {
+                          color: "#ffffff",
+                          textOutline: '0',
+                          fontWeight: "light",
+                          fontSize: "16px"
+                        }
+                    },
+               
+                },            
             }
-        }],
-        plotOptions: {
-            pie: {
-                dataLabels: {
-                    distance: -60,                    
-                    enabled: true,
-                    format: '{y}%',
-                    connectorPadding: 0,
-                    y: -6,
-                    style: {
-                        color: "#ffffff",
-                        textOutline: '0',
-                        fontWeight: "light",
-                        fontSize: "18px"
+        });
+    };
+
+    if($('#token__chart_2').length){
+        $('#token__chart_2').highcharts({
+            chart: {
+                renderTo: 'container',
+                type: 'pie',
+                spacing:[0, 0, 0, 0 ],
+                backgroundColor: 'transparent',
+                plotBackgroundColor: null,
+                plotBorderWidth: 0,
+                plotShadow: false
+
+            },
+
+            colors: ['transparent'],
+            credits: {
+                enabled: false
+            },
+
+            title: {
+                text: ''
+            },
+                  
+            tooltip: {
+                enabled: false,
+                formatter: function () {
+                    return '<b>' + this.point.name + '</b>';
+                }
+            },
+
+            series: [{
+                data: [
+                    {x:'Разработка программного обеспечения',  y:10, id:"token__chart_2_pie_2"},
+                    {x:'Привлечение рекламодателей',  y:15, id:"token__chart_3_pie_3"},
+                    {x:'Непредвиденные расходы',  y:5, id:"token__chart_4_pie_4"},
+                    {x:'>Правовая поддержка и администрирование.',  y:10, id:"token__chart_5_pie_5"},
+                    {x:'Развитие и продвижение компании', y:60, id:"token__chart_2_pie_1"}
+                ],
+                states: {
+                    hover: {
+                      color: '#0cc5a9'
                     }
                 },
-             
-            },            
-        }
-    });
+                point:{
+                    events: {
+                        mouseOver: function (event) {
+                          var chart_item = this.id;
+                          $('.token__text_block [for="' + chart_item + '"]').addClass('hover');
+                        },
+
+                        mouseOut: function (event) {
+                            var chart_item = this.id;
+                            $('.token__text_block [for="' + chart_item + '"]').removeClass('hover');
+                        }
+                    }
+                }
+            }],
+            plotOptions: {
+                pie: {
+                    dataLabels: {
+                        distance: -60,                    
+                        enabled: true,
+                        format: '{y}%',
+                        connectorPadding: 0,
+                        y: -6,
+                        style: {
+                            color: "#ffffff",
+                            textOutline: '0',
+                            fontWeight: "light",
+                            fontSize: "18px"
+                        }
+                    },
+                 
+                },            
+            }
+        });
+    };
 
 
 
