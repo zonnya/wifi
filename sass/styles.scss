@@ -1251,6 +1251,13 @@ body{
 
 }
 
+#foggot .modal-dialog{
+	height: 240px;
+	
+	@media(max-width: $mobile){
+		height: 265px;
+	}
+}
 #sing_up .modal-dialog{
 	height: 230px;
 	max-width: 540px;

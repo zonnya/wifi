@@ -113,7 +113,37 @@
           </div>
           <div class="modal__form_line">
             <div class="modal__check"><input type="checkbox"><label for=""><i class="fa fa-square-o"></i><i class="fa fa-check-square-o"></i>Запомнить</label></div>
-            <a href="#" class="modal__foggot">Забыли пароль?</a>
+            <a  href="#foggot" data-toggle="modal" aria-hidden="true" data-dismiss="modal" class="modal__foggot">Забыли пароль?</a>
+          </div>
+        </form>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+<div class="modal fade" id="foggot">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <a href="#" class="modal_close" data-dismiss="modal" aria-hidden="true">
+          <svg width="15" height="15" viewBox="0 0 24 24">
+            <g fill="#000000" fill-rule="evenodd" transform="translate(-1 -1)">
+            <rect width="32" height="4" x="-3" y="11" rx="2" transform="rotate(45 13 13)"></rect>
+            <rect width="32" height="4" x="-3" y="11" rx="2" transform="scale(-1 1) rotate(45 0 -18.385)"></rect>
+            </g>
+          </svg>
+        </a>
+      </div>
+      <div class="modal-body">
+        <form action="" class="modal__form" >
+          <div class="modal__text">
+           Введите почту, указанную при регистрации и мы вышлем вам пароль
+          </div>
+          <div class="modal__form_line">
+            <input class="modal__input" type="text" placeholder="Введите почту">
+          </div>       
+          <div class="modal__form_line">
+            <button class="modal__button">Отправить пароль</button>
           </div>
         </form>
       </div>

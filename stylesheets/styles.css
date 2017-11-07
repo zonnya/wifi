@@ -5038,22 +5038,33 @@ body p {
 }
 
 /* line 1254, ../sass/styles.scss */
+#foggot .modal-dialog {
+  height: 240px;
+}
+@media (max-width: 639px) {
+  /* line 1254, ../sass/styles.scss */
+  #foggot .modal-dialog {
+    height: 265px;
+  }
+}
+
+/* line 1261, ../sass/styles.scss */
 #sing_up .modal-dialog {
   height: 230px;
   max-width: 540px;
 }
 @media (max-width: 639px) {
-  /* line 1254, ../sass/styles.scss */
+  /* line 1261, ../sass/styles.scss */
   #sing_up .modal-dialog {
     height: 375px;
   }
 }
-/* line 1262, ../sass/styles.scss */
+/* line 1269, ../sass/styles.scss */
 #sing_up .modal-dialog .modal-content {
   padding: 40px 30px;
 }
 
-/* line 1267, ../sass/styles.scss */
+/* line 1274, ../sass/styles.scss */
 .modal-backdrop {
   background: rgba(7, 7, 7, 0.9);
   position: fixed;
@@ -5065,7 +5076,7 @@ body p {
   opacity: 0;
   transition: all 0.5s ease-out 0.1s;
 }
-/* line 1277, ../sass/styles.scss */
+/* line 1284, ../sass/styles.scss */
 .modal-backdrop.fade.in {
   opacity: 1;
 }
