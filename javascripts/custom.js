@@ -229,7 +229,76 @@ $(document).ready(function () {
       adaptiveHeight: true,
       dots: false
     });
+    $('.maps__images').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      fade: true,
+      // infinite: true,
+      // prevArrow: '<div class="slick-arrow slick-prev"></div>',
+      // nextArrow: '<div class="slick-arrow slick-next"></div>',
+      // appendArrows: $('.token__nav'),
+      arrows: false,
+      adaptiveHeight: false,
+      dots: false,
+      asNavFor: ".maps__navigation"
+    });
+    $('.maps__navigation').slick({
+      slidesToShow: 7,
+      slidesToScroll: 1,
+      infinite: false,
+      prevArrow: '<div class="slick-arrow slick-prev"></div>',
+      nextArrow: '<div class="slick-arrow slick-next"></div>',
+      appendArrows: $('.maps__nav'),
+      arrows: true,
+      dots: false,
+      focusOnSelect: true,
+      centerMode: false,
+      asNavFor: ".maps__images",
+      responsive: [
+        {
+          breakpoint: 1023,
+          settings: {
+            // centerMode: true,
+            slidesToShow: 5
+          }
+        },
+        {
+          breakpoint: 640,
+          settings: {
+            // centerMode: true,
+            slidesToShow: 4
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            // centerMode: true,
+            slidesToShow: 3
+          }
+        },
+        {
+          breakpoint: 380,
+          settings: {
+            // centerMode: true,
+            slidesToShow: 2
+          }
+        }
+      ]
+    });
 
+    $('.maps__images').on('afterChange', function(){
+        var currentSlide = $('.maps__navigation .slick-current');
+        var this_slide = currentSlide.attr("data-slick-index");
+        $('.maps__n_item').each(function(){
+            if ($(this).attr("data-slick-index")>this_slide || $(this).attr("data-slick-index")<0) {
+                $(this).removeClass('done');
+            }
+
+            else{
+                $(this).addClass('done');
+            }
+        })
+    })
 
     $(document).click(function(event) {
      

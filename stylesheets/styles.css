@@ -3783,7 +3783,7 @@ body p {
 }
 
 /* line 50, ../sass/styles.scss */
-.title_ff, .main_content__name, .presale__title, .presale__left, .avail__title, .command__item, .roadmap__title, .token {
+.title_ff, .main_content__name, .presale__title, .presale__left, .avail__title, .command__item, .roadmap__title, .token, .maps__text {
   font-family: 'PT Sans Narrow', sans-serif;
 }
 
@@ -4764,34 +4764,179 @@ body p {
   transform: rotate(180deg);
 }
 
-/* line 974, ../sass/styles.scss */
+/* line 975, ../sass/styles.scss */
+.maps__images {
+  margin-bottom: 30px;
+}
+/* line 979, ../sass/styles.scss */
+.maps__title {
+  font-size: 32px;
+  color: #ffffff;
+  line-height: 36px;
+  margin-bottom: 50px;
+}
+@media (max-width: 1023px) {
+  /* line 979, ../sass/styles.scss */
+  .maps__title {
+    margin-bottom: 30px;
+  }
+}
+/* line 990, ../sass/styles.scss */
+.maps__wrap {
+  position: relative;
+}
+@media (max-width: 1023px) {
+  /* line 990, ../sass/styles.scss */
+  .maps__wrap {
+    padding: 0 30px;
+  }
+}
+/* line 1000, ../sass/styles.scss */
+.maps__item img {
+  width: 100%;
+  max-width: 1000px;
+}
+/* line 1006, ../sass/styles.scss */
+.maps__navigation {
+  max-width: 1180px;
+  margin: 0 auto;
+}
+/* line 1012, ../sass/styles.scss */
+.maps__nav .slick-arrow {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: none;
+  width: 40px;
+  z-index: 2;
+  height: 100%;
+  cursor: pointer;
+  background: url("../assets/img/arrow.png") center center no-repeat;
+}
+@media (max-width: 1023px) {
+  /* line 1012, ../sass/styles.scss */
+  .maps__nav .slick-arrow {
+    display: block;
+  }
+}
+/* line 1028, ../sass/styles.scss */
+.maps__nav .slick-arrow.slick-prev {
+  left: -20px;
+}
+/* line 1032, ../sass/styles.scss */
+.maps__nav .slick-arrow.slick-next {
+  right: -20px;
+  transform: rotate(180deg);
+}
+/* line 1039, ../sass/styles.scss */
+.maps__n_item {
+  position: relative;
+  cursor: pointer;
+}
+/* line 1043, ../sass/styles.scss */
+.maps__n_item:before {
+  content: ' ';
+  position: absolute;
+  top: 17px;
+  left: -20px;
+  background: #ffffff;
+  height: 5px;
+  width: 50%;
+  display: block;
+}
+/* line 1053, ../sass/styles.scss */
+.maps__n_item:after {
+  content: ' ';
+  position: absolute;
+  top: 17px;
+  right: -20px;
+  display: block;
+  background: #ffffff;
+  height: 5px;
+  width: 50%;
+}
+/* line 1065, ../sass/styles.scss */
+.maps__n_item:first-of-type:before {
+  display: none;
+}
+/* line 1070, ../sass/styles.scss */
+.maps__n_item:last-of-type:after {
+  display: none;
+}
+/* line 1076, ../sass/styles.scss */
+.maps__n_item.done .maps__circal:before, .maps__n_item.slick-current .maps__circal:before {
+  background: #79e8e7;
+}
+/* line 1082, ../sass/styles.scss */
+.maps__circal {
+  height: 40px;
+  position: relative;
+  margin-bottom: 25px;
+}
+/* line 1087, ../sass/styles.scss */
+.maps__circal:before {
+  height: 19px;
+  width: 19px;
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  background: #ffffff;
+}
+/* line 1101, ../sass/styles.scss */
+.maps__circal:after {
+  content: ' ';
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  border: solid 3px #ffffff;
+  height: 40px;
+  width: 40px;
+}
+/* line 1117, ../sass/styles.scss */
+.maps__text {
+  font-size: 20px;
+  text-transform: uppercase;
+}
+
+/* line 1125, ../sass/styles.scss */
 .slick-slider {
   overflow: hidden;
 }
-/* line 976, ../sass/styles.scss */
+/* line 1127, ../sass/styles.scss */
 .slick-slider * {
   outline: none;
   box-sizing: border-box;
 }
-/* line 981, ../sass/styles.scss */
+/* line 1132, ../sass/styles.scss */
 .slick-slider .slick-slide {
   float: left;
 }
-/* line 986, ../sass/styles.scss */
+/* line 1137, ../sass/styles.scss */
 .slick-slider .slick-track:after {
   content: " ";
   display: block;
   height: 0;
   clear: both;
 }
-/* line 994, ../sass/styles.scss */
+/* line 1145, ../sass/styles.scss */
 .slick-slider .slick-list {
   padding: 0 !important;
   margin: 0 !important;
   overflow: hidden;
 }
 
-/* line 1004, ../sass/styles.scss */
+/* line 1155, ../sass/styles.scss */
 .modal {
   display: none;
   top: 0;
@@ -4803,11 +4948,11 @@ body p {
   opacity: 0;
   transition: all 0.5s ease-out 0.1s;
 }
-/* line 1015, ../sass/styles.scss */
+/* line 1166, ../sass/styles.scss */
 .modal.in {
   opacity: 1;
 }
-/* line 1019, ../sass/styles.scss */
+/* line 1170, ../sass/styles.scss */
 .modal .modal_close {
   position: absolute;
   z-index: 101;
@@ -4815,56 +4960,56 @@ body p {
   right: 10px;
   font-size: 20px !important;
 }
-/* line 1030, ../sass/styles.scss */
+/* line 1181, ../sass/styles.scss */
 .modal__text {
   color: #303030;
   margin-bottom: 20px;
   text-align: center;
 }
-/* line 1035, ../sass/styles.scss */
+/* line 1186, ../sass/styles.scss */
 .modal__text a, .modal__text a:link, .modal__text a:hover, .modal__text a:visited, .modal__text a:active, .modal__text a:focus {
   color: #2d72d0;
   text-decoration: underline;
 }
-/* line 1040, ../sass/styles.scss */
+/* line 1191, ../sass/styles.scss */
 .modal__text a:hover {
   text-decoration: none;
 }
-/* line 1045, ../sass/styles.scss */
+/* line 1196, ../sass/styles.scss */
 .modal__form_line {
   margin-bottom: 15px;
   text-align: center;
 }
-/* line 1049, ../sass/styles.scss */
+/* line 1200, ../sass/styles.scss */
 .modal__form_line:after {
   content: " ";
   display: block;
   height: 0;
   clear: both;
 }
-/* line 1056, ../sass/styles.scss */
+/* line 1207, ../sass/styles.scss */
 .modal__form_line:last-of-type {
   margin-bottom: 0;
 }
-/* line 1060, ../sass/styles.scss */
+/* line 1211, ../sass/styles.scss */
 .modal__form_line--col_wrap {
   margin: 0 -15px;
   margin-bottom: 15px;
 }
-/* line 1066, ../sass/styles.scss */
+/* line 1217, ../sass/styles.scss */
 .modal__col {
   width: 50%;
   float: left;
   padding: 0 15px;
 }
 @media (max-width: 639px) {
-  /* line 1066, ../sass/styles.scss */
+  /* line 1217, ../sass/styles.scss */
   .modal__col {
     width: 100%;
     margin-bottom: 15px;
   }
 }
-/* line 1077, ../sass/styles.scss */
+/* line 1228, ../sass/styles.scss */
 .modal__input {
   padding: 9px 15px;
   line-height: 20px;
@@ -4877,23 +5022,23 @@ body p {
   border: solid 1px #e8e8e8;
   outline: none;
 }
-/* line 1090, ../sass/styles.scss */
+/* line 1241, ../sass/styles.scss */
 .modal__input:hover, .modal__input:focus {
   border-color: #3178d8;
 }
-/* line 1095, ../sass/styles.scss */
+/* line 1246, ../sass/styles.scss */
 .modal__check {
   position: relative;
   width: 49%;
   display: inline-block;
 }
 @media (max-width: 639px) {
-  /* line 1095, ../sass/styles.scss */
+  /* line 1246, ../sass/styles.scss */
   .modal__check {
     width: 100%;
   }
 }
-/* line 1105, ../sass/styles.scss */
+/* line 1256, ../sass/styles.scss */
 .modal__check input {
   opacity: 0;
   position: absolute;
@@ -4907,35 +5052,35 @@ body p {
   height: 100%;
   cursor: pointer;
 }
-/* line 1121, ../sass/styles.scss */
+/* line 1272, ../sass/styles.scss */
 .modal__check input:checked + label i.fa-check-square-o {
   display: inline-block;
 }
-/* line 1125, ../sass/styles.scss */
+/* line 1276, ../sass/styles.scss */
 .modal__check input:checked + label i.fa-square-o {
   display: none;
 }
-/* line 1132, ../sass/styles.scss */
+/* line 1283, ../sass/styles.scss */
 .modal__check label {
   font-size: 16px;
   color: #303030;
   line-height: 20px;
 }
-/* line 1137, ../sass/styles.scss */
+/* line 1288, ../sass/styles.scss */
 .modal__check label i {
   margin-right: 5px;
   width: 15px;
   text-align: left;
 }
-/* line 1142, ../sass/styles.scss */
+/* line 1293, ../sass/styles.scss */
 .modal__check label i.fa-square-o {
   display: inline-block;
 }
-/* line 1146, ../sass/styles.scss */
+/* line 1297, ../sass/styles.scss */
 .modal__check label i.fa-check-square-o {
   display: none;
 }
-/* line 1153, ../sass/styles.scss */
+/* line 1304, ../sass/styles.scss */
 .modal .modal-dialog {
   position: absolute;
   background: #ffffff;
@@ -4952,7 +5097,7 @@ body p {
   max-height: 100%;
 }
 @media (max-width: 639px) {
-  /* line 1153, ../sass/styles.scss */
+  /* line 1304, ../sass/styles.scss */
   .modal .modal-dialog {
     width: 320px;
     max-width: 320px !important;
@@ -4960,12 +5105,12 @@ body p {
   }
 }
 @media (max-height: 375px) {
-  /* line 1153, ../sass/styles.scss */
+  /* line 1304, ../sass/styles.scss */
   .modal .modal-dialog {
     overflow: scroll;
   }
 }
-/* line 1183, ../sass/styles.scss */
+/* line 1334, ../sass/styles.scss */
 .modal a.modal_close, .modal a:link.modal_close, .modal a:hover.modal_close, .modal a:visited.modal_close, .modal a:active.modal_close, .modal a:focus.modal_close, .modal button.modal_close {
   position: absolute;
   right: 10px;
@@ -4975,7 +5120,7 @@ body p {
   opacity: 0.6;
   display: block;
 }
-/* line 1192, ../sass/styles.scss */
+/* line 1343, ../sass/styles.scss */
 .modal a.modal__button, .modal a:link.modal__button, .modal a:hover.modal__button, .modal a:visited.modal__button, .modal a:active.modal__button, .modal a:focus.modal__button, .modal button.modal__button {
   font-size: 18px;
   text-transform: uppercase;
@@ -4992,7 +5137,7 @@ body p {
   background: #2d72d0;
   cursor: pointer;
 }
-/* line 1209, ../sass/styles.scss */
+/* line 1360, ../sass/styles.scss */
 .modal a.modal__foggot, .modal a:link.modal__foggot, .modal a:hover.modal__foggot, .modal a:visited.modal__foggot, .modal a:active.modal__foggot, .modal a:focus.modal__foggot, .modal button.modal__foggot {
   font-size: 16px;
   line-height: 20px;
@@ -5002,69 +5147,69 @@ body p {
   width: 49%;
 }
 @media (max-width: 639px) {
-  /* line 1209, ../sass/styles.scss */
+  /* line 1360, ../sass/styles.scss */
   .modal a.modal__foggot, .modal a:link.modal__foggot, .modal a:hover.modal__foggot, .modal a:visited.modal__foggot, .modal a:active.modal__foggot, .modal a:focus.modal__foggot, .modal button.modal__foggot {
     width: 100%;
   }
 }
-/* line 1225, ../sass/styles.scss */
+/* line 1376, ../sass/styles.scss */
 .modal a:hover.modal_close {
   opacity: 1;
 }
-/* line 1228, ../sass/styles.scss */
+/* line 1379, ../sass/styles.scss */
 .modal a:hover.modal__foggot {
   text-decoration: none;
 }
-/* line 1233, ../sass/styles.scss */
+/* line 1384, ../sass/styles.scss */
 .modal.in {
   display: block;
 }
-/* line 1236, ../sass/styles.scss */
+/* line 1387, ../sass/styles.scss */
 .modal .modal-content {
   border: 0;
   padding: 30px;
 }
-/* line 1239, ../sass/styles.scss */
+/* line 1390, ../sass/styles.scss */
 .modal .modal-content:after {
   content: " ";
   display: block;
   height: 0;
   clear: both;
 }
-/* line 1247, ../sass/styles.scss */
+/* line 1398, ../sass/styles.scss */
 .modal .modal-body, .modal .modal-header {
   padding: 0;
   border: 0;
 }
 
-/* line 1254, ../sass/styles.scss */
+/* line 1405, ../sass/styles.scss */
 #foggot .modal-dialog {
   height: 240px;
 }
 @media (max-width: 639px) {
-  /* line 1254, ../sass/styles.scss */
+  /* line 1405, ../sass/styles.scss */
   #foggot .modal-dialog {
     height: 265px;
   }
 }
 
-/* line 1261, ../sass/styles.scss */
+/* line 1412, ../sass/styles.scss */
 #sing_up .modal-dialog {
   height: 230px;
   max-width: 540px;
 }
 @media (max-width: 639px) {
-  /* line 1261, ../sass/styles.scss */
+  /* line 1412, ../sass/styles.scss */
   #sing_up .modal-dialog {
     height: 375px;
   }
 }
-/* line 1269, ../sass/styles.scss */
+/* line 1420, ../sass/styles.scss */
 #sing_up .modal-dialog .modal-content {
   padding: 40px 30px;
 }
 
-/* line 1274, ../sass/styles.scss */
+/* line 1425, ../sass/styles.scss */
 .modal-backdrop {
   background: rgba(7, 7, 7, 0.9);
   position: fixed;
@@ -5076,7 +5221,7 @@ body p {
   opacity: 0;
   transition: all 0.5s ease-out 0.1s;
 }
-/* line 1284, ../sass/styles.scss */
+/* line 1435, ../sass/styles.scss */
 .modal-backdrop.fade.in {
   opacity: 1;
 }
