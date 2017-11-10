@@ -2,7 +2,7 @@
 @import 'fas/font-awesome';
 
 
-$base_img: '../assets/img/';
+$base_img: '../my_assets/img/';
 
 
 $text_color: #ffffff;
@@ -83,6 +83,7 @@ body{
 	max-width: 1685px;
 	padding: 0 20px;
 	padding-bottom: 40px;
+	margin: 0 auto;
 
 	&:after{
 		content:" ";
@@ -1437,3 +1438,9 @@ body{
 	}
 }
 // end modal
+
+
+.ps-container > .ps-scrollbar-y-rail, .ps-container > .ps-scrollbar-y-rail > .ps-scrollbar-y,
+.ps-container > .ps-scrollbar-x-rail, .ps-container > .ps-scrollbar-x-rail > .ps-scrollbar-x{
+	position: absolute;
+}
