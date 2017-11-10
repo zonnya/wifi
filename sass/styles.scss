@@ -7,6 +7,7 @@ $base_img: '../my_assets/img/';
 
 $text_color: #ffffff;
 $active_color: #79e8e7;
+$active_color_dop: #3178d8;
 
 $desktop-big: 1600px - 1px;
 $desktop: 1440px - 1px;
@@ -471,7 +472,7 @@ body{
 			display: block;
 			margin: 0 auto;
 			text-decoration: none;
-			border:  solid 5px #3178d8;
+			border:  solid 5px $active_color_dop;
 
 			@media(max-width: $mobile){
 				font-size: 20px;
@@ -479,7 +480,7 @@ body{
 		}
 
 		a:hover{
-			background-color: #3178d8;
+			background-color: $active_color_dop;
 		}
 	}
 }
@@ -1129,22 +1130,66 @@ body{
 	font-size: 18x;
 	line-height: 18px;
 	padding: 5px 15px;
-	border: solid 2px #3178d8;
+	border: solid 2px $active_color_dop;
 	color: #ffffff;
 	text-decoration: none;
 
 	&:hover{
-		background-color: #3178d8;
+		background-color: $active_color_dop;
 	}
 
 	&--long{
 		display: block;
 	}
+
+	&--log_out{
+		// background-color: $active_color_dop;
+
+		&:hover{
+			border-color: $active_color;
+			background-color: $active_color;
+		}
+	}
 }
+
 .lk{
 
+	&__title{
+		font-size: 37px;
+	    font-weight: 100;
+	    line-height: 42px;
+	    color: #ffffff;
+	    margin-bottom: 20px;
+	}
+
+	&__account{
+		text-align: right;
+		// margin-bottom: 40px;
+		margin-bottom: -32px;
+		margin-top: -30px;
+
+		&_link{
+			display: inline-block;
+			text-decoration: none;
+			font-size: 18px;
+			padding: 5px 0;
+			margin:  0;
+			margin-right: 15px;
+			line-height: 22px;
+			color: #ffffff;
+
+			&:hover{
+				color: $active_color;
+			}
+		}
+
+		@media(max-width: $tablet){
+			margin-bottom: 40px;
+		}
+	}
+
 	&__nav{
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 
 		a, a:link, a:hover, a:visited, a:active, a:focus{
 			font-size: 22px;
@@ -1155,6 +1200,7 @@ body{
 			text-decoration: none;
 			padding: 0 20px;
 			font-weight: 500;
+			line-height: 32px;
 
 			&.active{
 				color: $active_color;
@@ -1167,7 +1213,30 @@ body{
 		max-width: 400px;
 		margin: 0 auto;
 	}
+
+	&__text{
+		font-size: 18px;
+		max-width: 600px;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 30px;
+		font-weight: 500;
+	}
+
+	&__link{
+		color: $active_color;
+		font-style: italic;
+		font-weight: 500;
+		font-size: 22px;
+		text-align: center;
+		text-decoration: underline;
+
+		&:hover{
+			text-decoration: none;
+		}
+	}
 }
+
 .simple_form{
 	&__line{
 		margin-bottom: 15px;
@@ -1185,7 +1254,7 @@ body{
 		}
 
 		&--wrap_text{
-			border: solid 1px #3178d8;
+			border: solid 1px $active_color_dop;
 			padding: 15px;
 		}
 	}
@@ -1334,7 +1403,188 @@ body{
 			// text-align: left;
 		}
 	}
+}
 
+.have {
+    text-align: center;
+    border: solid 1px $active_color_dop;
+    padding: 20px;
+    max-width: 320px;
+    margin: 0 auto;
+    margin-bottom: 15px;
+
+    &__num{
+    	font-size: 60px;
+	    line-height: 60px;
+	    margin-bottom: 10px;
+	    color: $active_color;
+	    font-weight: bold;
+    }
+    &__unit {
+	    font-size: 18px;
+	    font-weight: bold;
+	    line-height: 20px;
+	    color: #ffffff;
+	}
+
+	&__text{
+		margin: 0 auto;
+		margin-bottom: 40px;
+		font-size: 14px;
+		max-width: 320px;
+		line-height: 18px;
+		text-align: center;
+	}
+}
+
+.address{
+	margin: 50px -15px;
+	&:after{
+		content:" ";
+		display:block;
+		height: 0;
+		clear: both;
+	}
+
+	&__block_wrap{
+		float: left;
+		width: 50%;
+		padding: 0 15px;
+		margin: 10px 0;
+
+		@media(max-width: $tablet){
+			width: 100%;
+		}
+	}
+
+	&__block{
+		border: solid 1px #ffffff;
+		padding: 30px 15px;
+		text-align: center;
+		max-width: 590px;
+		width: 100%;
+		margin: 0 auto;
+
+		&--dop{
+			.address__title, .address__dop_text{
+				color: $active_color;
+			}
+		}
+	}
+
+	&__title{
+		color: $active_color_dop;
+		font-size: 22px;
+		font-weight: 500;
+		margin-bottom: 15px;
+	}
+
+	&__text{
+		font-size: 18px;
+		color: #ffffff;
+		line-height: 22px;
+		text-align: center;
+		margin-bottom: 15px;
+		word-wrap: break-word;
+	}
+
+	&__dop_text{
+		font-size: 16px;
+		line-height: 22px;
+		font-weight: 500;
+		text-align: center;
+		color: $active_color_dop;
+	}
+}
+
+.documents{
+	text-align: center;
+	margin: 0 -10px;
+	font-size: 0;
+	line-height: 0;
+
+	&__title{
+		text-align: center;
+		font-size: 32px;
+		font-weight: 500;
+		margin-bottom: 30px;
+		color: #ffffff;
+	}
+
+	&__item{
+		display: inline-block;
+		width: 280px;
+		margin: 10px 0;
+		padding: 0 10px;
+		text-align: center;
+		vertical-align: top;
+
+		&:hover{
+			.documents__hover{
+				display: block;
+			}
+		}
+
+		&:last-of-type{
+			border-right: 0;
+		}
+	}
+
+	a, a:link, a:hover, a:visited, a:active, a:focus{
+		font-size: 18px;
+		line-height: 20px;
+		color: #ffffff;
+		text-decoration: none;
+		display: block;
+		position: relative;
+		padding: 15px 20px;
+		text-align: center;
+	}
+
+	&__name{
+		margin-top: 15px;
+		font-size: 18px;
+		font-weight: normal;
+		color: #ffffff;
+	}
+
+	&__icon{
+		height: 40px;
+		width: 100%;
+		background: center center no-repeat;
+		background-size: contain;
+
+		i{
+			font-size: 40px;
+			color: $active_color;
+			line-height: 40px;
+		}
+
+		&--download{
+			i{
+				color: $active_color_dop;
+			}
+		}
+	}
+
+	&__hover{
+		display: none;
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		padding: 15px 20px;
+		background: rgba(255, 255, 255, 1);
+		box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
+
+		.documents__name{
+			color: $active_color_dop;
+			font-size: 22px;
+		}
+
+
+	}
 }
 
 // slick
@@ -1455,7 +1705,7 @@ body{
 
 
 	&:hover, &:focus{
-		border-color: #3178d8;
+		border-color: $active_color_dop;
 	}
   }
 
@@ -1530,7 +1780,7 @@ body{
     // height: 380px;
     padding: 0;
     // @include border-radius($big_bdrs);
-    border: solid 1px #3178d8;
+    border: solid 1px $active_color_dop;
     height: 315px;
     max-height: 100%;
 
