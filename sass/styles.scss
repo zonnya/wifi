@@ -130,6 +130,18 @@ body{
 		padding-top: 30px;
 	}
 
+	@media(max-width: $desktop){
+		padding-bottom: 0;
+	}
+
+	@media(max-width: $tablet){
+		position: fixed;
+		left: 0;
+		top: 0;
+		right: 0;
+		width: 100%;
+	}
+
 	@media(max-width: $mobile){
 		padding-top: 5px;
 	}
@@ -146,9 +158,13 @@ body{
 	}
 }
 
-.conent{
+.content{
 	padding-bottom: 30px;
 	margin: 0 auto;
+
+	@media(max-width: $tablet){
+		padding-top: 130px;
+	}
 }
 
 .logo{
@@ -198,6 +214,27 @@ body{
 
 	a:hover{
 		background: $active_color;
+	}
+
+	&--footer{
+		margin-left: 0;
+		@media(max-width: $desktop-small){
+			margin-left: 0px;
+			margin-top: 0px;
+		}
+
+		@media(max-width: $mobile){
+			margin-top: 20px;
+		}
+
+		a, a:link, a:hover, a:visited, a:active, a:focus{
+			border: 0;
+			background-color: transparent;
+		}
+
+		a:hover{
+			color: $active_color;
+		}
 	}
 }
 
@@ -1630,6 +1667,60 @@ body{
 		}
 
 
+	}
+}
+
+.footer{
+	display: none;
+	border-top: solid 2px #ffffff;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: left;
+
+	&:after{
+		content:" ";
+		display:block;
+		height: 0;
+		clear: both;
+	}
+	@media(max-width: $desktop-big){
+		display: block;
+	}
+
+	&__left_side{
+		float: left;
+
+		@media(max-width: $mobile){
+			width: 100%;
+		}
+
+		a, a:link, a:hover, a:visited, a:active, a:focus{
+			color: #ffffff;
+			font-size: 24px;
+			text-decoration: none;
+			display: inline-block;
+			text-align: left;
+
+			span{
+				display: block;
+
+				&.footer__text{
+					font-size: 16px;
+				}
+			}
+		}
+
+		a:hover{
+			color: $active_color;
+		}
+	}
+
+	&__right_side{
+		float: right;
+
+		@media(max-width: $mobile){
+			width: 100%;
+		}
 	}
 }
 
