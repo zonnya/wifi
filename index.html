@@ -65,17 +65,17 @@
       <div class="content__block main_content">
         <div class="main_content__title"><span>Глобальная </span><span>Децентрализованная </span><span>Бесплатная</span></div>
         <div class="main_content__name">Wi-Fi сеть</div>
-        <div class="presale">
+        <form id="getBonusForm" class="presale" action="javascript:void(null);" onsubmit="requestSandcoins()">
           <div class="presale__title">PRESALE начнется через 10 дней</div>
           <div class="presale__form">
             <div class="presale__left">White list открыт</div>
             <div class="presale__right">
               <label for="" class="presale__label">введите вашу почту</label>
-              <input type="text" class="presale__input" placeholder="worldwifi@wifi.com">
+              <input id="getBonusEmail" name="request[email]" type="text" class="presale__input" placeholder="worldwifi@wifi.com">
             </div>
           </div>
-          <div class="presale__bonus"><a href="#">Получить бонус 25%</a></div>
-        </div>
+          <div id="getBonusBtn" class="presale__bonus"><button type="submit">Получить бонус 25%</button></div>
+        </form>
         <div class="join"><a href="#"><span>Присоедись к</span><span>нашему чату</span></a></div>
         <div class="main_content__dop_text">Теперь ваш роутер приносит доход!</div>
       </div>

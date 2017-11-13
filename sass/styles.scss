@@ -8,6 +8,7 @@ $base_img: '../my_assets/img/';
 $text_color: #ffffff;
 $active_color: #79e8e7;
 $active_color_dop: #3178d8;
+$disabled_color_dop: #999;
 
 $desktop-big: 1600px - 1px;
 $desktop: 1440px - 1px;
@@ -497,7 +498,7 @@ body{
 	}
 
 	&__bonus{
-		a, a:link, a:hover, a:visited, a:active, a:focus{
+		a, a:link, a:hover, a:visited, a:active, a:focus, button{
 			text-transform: uppercase;
 			font-size: 24px;
 			line-height: 64px;
@@ -508,14 +509,19 @@ body{
 			margin: 0 auto;
 			text-decoration: none;
 			border:  solid 5px $active_color_dop;
-
+			background: transparent;
+			color: white;
+			cursor: pointer;
 			@media(max-width: $mobile){
 				font-size: 20px;
 			}
 		}
 
-		a:hover{
+		a:hover, button:hover{
 			background-color: $active_color_dop;
+		}
+		button:disabled {
+			background-color: $disabled_color_dop;
 		}
 	}
 }
