@@ -1137,12 +1137,16 @@ body{
 
 .btn{
 	display: inline-block;
-	font-size: 18x;
+	font-size: 12px;
 	line-height: 18px;
 	padding: 5px 15px;
 	border: solid 2px $active_color_dop;
 	color: #ffffff;
 	text-decoration: none;
+	background-color: transparent;
+	outline: none;
+	max-width: none;
+	cursor: pointer;
 
 	&:hover{
 		background-color: $active_color_dop;
@@ -1150,6 +1154,7 @@ body{
 
 	&--long{
 		display: block;
+		width: 100%;
 	}
 
 	&--log_out{
